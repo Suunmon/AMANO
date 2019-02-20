@@ -1,0 +1,19 @@
+'''EXERCICIO: Faça um programa que leia a quanditade de pessoas que
+serao convidadas para uma festa.
+Após isso o programa irá perguntar o nome de todas as pessoas e
+colocar numa lista de convidados
+Após isso irá imprimir todos os nomes da lista
+'''
+print('------------------------')
+print('CONTROLE DE CONVIDADOS')
+print('------------------------')
+
+qt_p = int(input('Digite a quantidade de convidados:'))
+qtd = 0
+
+while qtd < qt_p:
+
+    convidados = input('Nomes: ')
+    qtd += 1
+
+print(qtd, 'pessoas serão convidadas.',)
