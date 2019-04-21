@@ -1,0 +1,54 @@
+program CandidatosWhile;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+var voto, continuar: char;
+  v1, v2, v3, v4: integer;
+begin
+  Writeln('ESCOLHA SEU CANDIDATO A VOTACAO');
+  Writeln('1 - Joao');
+  Writeln('2 - Maria');
+  Writeln('3 - Jose');
+  Writeln('4 - Rosa');
+  v1:= 0;
+  v2:= 0;
+  v3:= 0;
+  v4:= 0;
+  continuar:= 's';
+  while continuar = 's' do
+  begin
+   Write('Escolha: ');
+   read(voto);
+   write('Deseja fazer novamente? s/n: ');
+   read(continuar);
+    if voto = '1' then
+   begin
+    v1:= v1+1;
+   end;
+   If voto = '2' then
+   begin
+    v2:= v2+1;
+   end;
+   if voto = '3' then
+   begin
+    v3:= v3+1;
+   End;
+   if voto = '4' then
+   begin
+    v4:= v4+1;
+   end;
+   if voto > '4' then
+   begin
+    writeln('Candidato Inexistente.');
+    readln;
+   end;
+  end;   
+  Writeln('O 1 Candidato teve ', v1, ' votos');
+  Writeln('O 2 Candidato teve ', v2, ' votos');
+  Writeln('O 3 Candidato teve ', v3, ' votos');
+  Writeln('O 4 Candidato teve ', v4, ' votos');
+  readln;
+end.
